@@ -3,36 +3,76 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Carbon\Carbon;
 use \DateTime;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Validation\ValidationException;
 
 class DateController extends Controller
 {
-    public function days(Request $request)
-    {
-        $this->validate($request, [
-            'start' => 'required|date_format:Y-m-d\TH:i:sO',
-            'end' => 'required|date_format:Y-m-d\TH:i:sO',
-        ]);
+    private const date_validation_parameter = 'required|date_format:' . DateTime::ATOM;
 
-        $start = DateTime::createFromFormat(DateTime::ISO8601, $request->input('start'));
-        $end = DateTime::createFromFormat(DateTime::ISO8601, $request->input(('end')));
+    private const validation_parameters = [
+        'start' => self::date_validation_parameter,
+        'end' => self::date_validation_parameter,
+    ];
+
+    /**
+     * Get the number of days between two datetime parameters.
+     *
+     * @param Request $request
+     * @return JsonResponse
+     * @throws ValidationException
+     */
+    public function days(Request $request): JsonResponse
+    {
+        $this->validate($request, self::validation_parameters);
+
+        $start = Carbon::parse($request->input('start'));
+        $end = Carbon::parse($request->input('end'));
 
         return response()->json([
-            $start->format('Y-m-d'),
-            $end->format('Y-m-d')
-            ]
-        );
+            $end->diffInDays($start)
+        ]);
     }
 
-    public function weekdays()
+    /**
+     * Get the number of weekdays between two datetime parameters.
+     *
+     * @param Request $request
+     * @return JsonResponse
+     * @throws ValidationException
+     */
+    public function weekdays(Request $request): JsonResponse
     {
-        return response()->json('weekdays');
+        $this->validate($request, self::validation_parameters);
+
+        $start = Carbon::parse($request->input('start'));
+        $end = Carbon::parse($request->input('end'));
+
+        return response()->json([
+            $end->diffInWeekdays($start)
+        ]);
     }
 
-    public function weeks()
+    /**
+     * Get the number of complete weeks between two datetime parameters.
+     *
+     * @param Request $request
+     * @return JsonResponse
+     * @throws ValidationException
+     */
+    public function weeks(Request $request): JsonResponse
     {
-        return response()->json('weeks');
-    }
+        $this->validate($request, self::validation_parameters);
 
+        $start = Carbon::parse($request->input('start'));
+        $end = Carbon::parse($request->input('end'));
+
+        return response()->json([
+            $end->diffInWeeks($start)
+        ]);
+    }
 }

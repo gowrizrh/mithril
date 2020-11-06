@@ -22,7 +22,7 @@ $router->get('/', function () use ($router) {
 $router->group(['prefix' => 'api'], function() use ($router) {
     $router->post('days',  ['uses' => 'DateController@days']);
 
-    $router->get('weekdays', ['uses' => 'DateController@weekdays']);
+    $router->post('weekdays', ['uses' => 'DateController@weekdays']);
 
-    $router->get('weeks', ['uses' => 'DateController@weeks']);
+    $router->post('weeks', ['uses' => 'DateController@weeks']);
 });
