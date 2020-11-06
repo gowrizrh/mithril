@@ -112,4 +112,6 @@ $app->router->group([
     require __DIR__.'/../routes/web.php';
 });
 
+$app->register(Pearl\RequestValidate\RequestServiceProvider::class);
+
 return $app;
