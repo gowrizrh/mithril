@@ -94,6 +94,8 @@ $app->configure('app');
 // $app->register(App\Providers\AppServiceProvider::class);
 // $app->register(App\Providers\AuthServiceProvider::class);
 // $app->register(App\Providers\EventServiceProvider::class);
+$app->register(Pearl\RequestValidate\RequestServiceProvider::class);
+$app->register(App\Providers\ConvertServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
@@ -111,7 +113,5 @@ $app->router->group([
 ], function ($router) {
     require __DIR__.'/../routes/web.php';
 });
-
-$app->register(Pearl\RequestValidate\RequestServiceProvider::class);
 
 return $app;

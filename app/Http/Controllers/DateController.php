@@ -3,11 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\DateRequest;
-use Carbon\Carbon;
+use App\Services\ConvertService;
 use Illuminate\Http\JsonResponse;
 
 class DateController extends Controller
 {
+    private ConvertService $service;
+
+    public function __construct(ConvertService $service)
+    {
+        $this->service = $service;
+    }
 
     /**
      * Get the number of days between two datetime parameters.
@@ -17,12 +23,9 @@ class DateController extends Controller
      */
     public function days(DateRequest $request): JsonResponse
     {
-        $start = Carbon::parse($request->input('start'));
-        $end = Carbon::parse($request->input('end'));
+        $result = $this->service->diffInDays($request);
 
-        return response()->json([
-            $end->diffInDays($start)
-        ]);
+        return response()->json($result);
     }
 
     /**
@@ -33,12 +36,9 @@ class DateController extends Controller
      */
     public function weekdays(DateRequest $request): JsonResponse
     {
-        $start = Carbon::parse($request->input('start'));
-        $end = Carbon::parse($request->input('end'));
+        $result = $this->service->diffInWeekDays($request);
 
-        return response()->json([
-            $end->diffInWeekdays($start)
-        ]);
+        return response()->json($result);
     }
 
     /**
@@ -49,11 +49,8 @@ class DateController extends Controller
      */
     public function weeks(DateRequest $request): JsonResponse
     {
-        $start = Carbon::parse($request->input('start'));
-        $end = Carbon::parse($request->input('end'));
+        $result = $this->service->diffInWeeks($request);
 
-        return response()->json([
-            $end->diffInWeeks($start)
-        ]);
+        return response()->json($result);
     }
 }
