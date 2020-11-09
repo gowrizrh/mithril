@@ -43,7 +43,7 @@ class DateRequest extends RequestAbstract
     {
         if ($validator->passes()) {
             $this->start = Carbon::createFromFormat(DateTime::ATOM, $this->input('start'));
-            $this->end = Carbon::parse($this->input('end'));
+            $this->end = Carbon::createFromFormat(DateTime::ATOM, $this->input('end'));
             $this->convert = $this->input('format');
         }
     }
