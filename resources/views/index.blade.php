@@ -14,6 +14,12 @@
         a {
             display: block;
         }
+
+        body {
+            background-image: url("/background.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
     </style>
 </head>
 <body>
@@ -26,8 +32,6 @@
         <a href="#days">Days</a>
         <a href="#weekdays">Weekdays</a>
         <a href="#weeks">Weeks</a>
-    </r-cell>
-    <r-cell>
     </r-cell>
 </r-grid>
 <r-grid columns="1">

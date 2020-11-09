@@ -5,14 +5,17 @@
 Mithril is a metal from Middle-earth which resembles silver but is stronger and lighter than steel and, I like
 lord of the rings 🙂
 
+![Mithril](screenshot.png)
+
 
 ## Environment
 This project is written with PHP 7.4 with the lumen microframework.
 
 ## Running the project
 1. Run `composer install`
-2. Simply open the project folder and use php's in built server to serve the public directory
-3. `php -S localhost:8000 -t public`
+2. Copy `.env.example` to `.env` and set `APP_DEBUG=false`
+3. Simply open the project folder and use php's in built server to serve the public directory
+4. `php -S localhost:8000 -t public`
 
 ### Using Postman
 There is also a postman collection file included to debug the API with Postman. Simply import it, create an environment
