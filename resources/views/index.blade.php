@@ -72,7 +72,7 @@
     <r-cell>
         <a id="weekdays"></a>
         <h2>Weekdays</h2>
-        <pre>POST /api/days</pre>
+        <pre>POST /api/weekdays</pre>
         <p>Find out the number of weekdays between two datetime parameters</p>
 
         <h6>Parameters</h6>
@@ -113,7 +113,7 @@
         <a id="weeks"></a>
         <h2>Weeks</h2>
 
-        <pre>POST /api/days</pre>
+        <pre>POST /api/weeks</pre>
         <p>Find out the number of complete weeks between two datetime parameters</p>
 
         <h6>Parameters</h6>
