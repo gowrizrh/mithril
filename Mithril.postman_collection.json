@@ -1,0 +1,512 @@
+{
+	"info": {
+		"_postman_id": "491531aa-cfdc-44ca-87b3-1eb62cb93415",
+		"name": "Mithril",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Days",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start",
+							"value": "2020-12-14T01:00:00+00:00",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2020-12-19T01:00:00+00:00",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "h",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/days",
+					"protocol": "{{host}}",
+					"host": [
+						"{{scheme}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"{{prefix}}",
+						"days"
+					]
+				},
+				"description": "Find out the number of days between two datetime parameters."
+			},
+			"response": [
+				{
+					"name": "Difference between two datetime strings",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start",
+									"value": "2020-12-15T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "end",
+									"value": "2020-12-19T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "y",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/days",
+							"protocol": "{{host}}",
+							"host": [
+								"{{scheme}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{prefix}}",
+								"days"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:47:18 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:47:18 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "4"
+				},
+				{
+					"name": "Difference converted to hours",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start",
+									"value": "2020-12-15T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "end",
+									"value": "2020-12-19T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "h",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/days",
+							"protocol": "{{host}}",
+							"host": [
+								"{{scheme}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{prefix}}",
+								"days"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:47:46 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:47:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "96"
+				}
+			]
+		},
+		{
+			"name": "Get Weekdays",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start",
+							"value": "2020-12-15T01:00:00+00:00",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2020-12-19T01:00:00+00:00",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "m",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weekdays",
+					"protocol": "{{host}}",
+					"host": [
+						"{{scheme}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"{{prefix}}",
+						"weekdays"
+					]
+				},
+				"description": "Find out the number of days between two datetime parameters."
+			},
+			"response": [
+				{
+					"name": "Difference in weekdays",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start",
+									"value": "2020-12-15T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "end",
+									"value": "2020-12-19T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "y",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weekdays",
+							"protocol": "{{host}}",
+							"host": [
+								"{{scheme}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{prefix}}",
+								"weekdays"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:50:44 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:50:44 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "4"
+				},
+				{
+					"name": "Difference in weekdays converted to mintues",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start",
+									"value": "2020-12-15T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "end",
+									"value": "2020-12-19T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "m",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weekdays",
+							"protocol": "{{host}}",
+							"host": [
+								"{{scheme}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{prefix}}",
+								"weekdays"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:51:07 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:51:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "5760"
+				}
+			]
+		},
+		{
+			"name": "Get Weeks",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "start",
+							"value": "2020-01-01T01:00:00+00:00",
+							"type": "text"
+						},
+						{
+							"key": "end",
+							"value": "2020-12-31T01:00:00+00:00",
+							"type": "text"
+						},
+						{
+							"key": "format",
+							"value": "h",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weeks",
+					"protocol": "{{host}}",
+					"host": [
+						"{{scheme}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"{{prefix}}",
+						"weeks"
+					]
+				},
+				"description": "Find out the number of days between two datetime parameters."
+			},
+			"response": [
+				{
+					"name": "Difference in weeks",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "start",
+									"value": "2020-01-01T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "end",
+									"value": "2020-12-31T01:00:00+00:00",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "h",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weeks",
+							"protocol": "{{host}}",
+							"host": [
+								"{{scheme}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"{{prefix}}",
+								"weeks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Host",
+							"value": "localhost:8000"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:51:51 GMT"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 09 Nov 2020 09:51:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "close"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.4.11"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "52"
+				}
+			]
+		}
+	],
+	"protocolProfileBehavior": {}
+}

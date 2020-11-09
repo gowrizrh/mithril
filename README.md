@@ -7,12 +7,24 @@ lord of the rings 🙂
 
 
 ## Environment
-This project is written on PHP 7.4 with the lumen microframework.
+This project is written with PHP 7.4 with the lumen microframework.
 
 ## Running the project
 1. Run `composer install`
 2. Simply open the project folder and use php's in built server to serve the public directory
 3. `php -S localhost:8000 -t public`
+
+### Using Postman
+There is also a postman collection file included to debug the API with Postman. Simply import it, create an environment
+and then create the following variables and values.
+
+`host` - `http`
+
+`scheme` - `localhost`
+
+`port` - `8000`
+
+`prefix` - `api`
 
 ### API Documentation
 
