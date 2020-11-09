@@ -2,17 +2,17 @@
 
 **Why name Mithril?**
 
-Mithril is a from Middle-earth which resembles silver but is stronger and lighter than steel and, I like
+Mithril is a metal from Middle-earth which resembles silver but is stronger and lighter than steel and, I like
 lord of the rings 🙂
 
 
 ## Environment
-This project was developed on PHP 7.4 with the lumen microframework.
+This project is written on PHP 7.4 with the lumen microframework.
 
 ## Running the project
 1. Run `composer install`
 2. Simply open the project folder and use php's in built server to serve the public directory
-3.`php -S localhost:8000 -t public`
+3. `php -S localhost:8000 -t public`
 
 ### API Documentation
 

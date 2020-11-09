@@ -41,10 +41,10 @@ class DateRequest extends RequestAbstract
      */
     public function withValidator($validator)
     {
-        $validator->after(function($validator) {
-            $this->start = Carbon::parse($this->input('start'));
+        if ($validator->passes()) {
+            $this->start = Carbon::createFromFormat(DateTime::ATOM, $this->input('start'));
             $this->end = Carbon::parse($this->input('end'));
             $this->convert = $this->input('format');
-        });
+        }
     }
 }
