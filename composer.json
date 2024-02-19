@@ -1,18 +1,17 @@
 {
-    "name": "laravel/lumen",
-    "description": "The Laravel Lumen Framework.",
+    "name": "gowrizrh/mithril",
+    "description": "The Mithril Project",
     "keywords": ["framework", "laravel", "lumen"],
     "license": "MIT",
     "type": "project",
     "require": {
-        "php": "^7.4|^8.0",
-        "laravel/lumen-framework": "^8.0",
-        "pearl/lumen-request-validate": "^1.6"
+        "php": "^8.0",
+        "laravel/lumen-framework": "^10.0",
+        "pearl/lumen-request-validate": "^1.8"
     },
     "require-dev": {
-        "fzaninotto/faker": "^1.9.1",
-        "mockery/mockery": "^1.3.1",
-        "phpunit/phpunit": "^9.3"
+        "mockery/mockery": "^1.6.7",
+        "phpunit/phpunit": "^10.0"
     },
     "autoload": {
         "psr-4": {
