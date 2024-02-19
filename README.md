@@ -1,15 +1,10 @@
-# Welcome to Mithril
+# Mithril
 
-**Why name Mithril?**
-
-Mithril is a metal from Middle-earth which resembles silver but is stronger and lighter than steel and, I like
-lord of the rings 🙂
 
 ![Mithril](screenshot.png)
 
-
 ## Environment
-This project is written with PHP 7.4 with the lumen microframework.
+This project is written in PHP 8.3 with the lumen microframework.
 
 ## Running the project
 1. Run `composer install`
@@ -21,9 +16,9 @@ This project is written with PHP 7.4 with the lumen microframework.
 There is also a postman collection file included to debug the API with Postman. Simply import it, create an environment
 and then create the following variables and values.
 
-`host` - `http`
+`scheme` - `http`
 
-`scheme` - `localhost`
+`host` - `localhost`
 
 `port` - `8000`
 
