@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "491531aa-cfdc-44ca-87b3-1eb62cb93415",
+		"_postman_id": "f30cf5f7-28ac-463a-864f-08da377ba60b",
 		"name": "Mithril",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14053722"
 	},
 	"item": [
 		{
@@ -32,12 +33,11 @@
 					]
 				},
 				"url": {
-					"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/days",
-					"protocol": "{{host}}",
+					"raw": "{{scheme}}://{{host}}/{{prefix}}/days",
+					"protocol": "{{scheme}}",
 					"host": [
-						"{{scheme}}"
+						"{{host}}"
 					],
-					"port": "{{port}}",
 					"path": [
 						"{{prefix}}",
 						"days"
@@ -73,12 +73,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/days",
-							"protocol": "{{host}}",
+							"raw": "{{scheme}}://{{host}}/{{prefix}}/days",
+							"protocol": "{{scheme}}",
 							"host": [
-								"{{scheme}}"
+								"{{host}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"{{prefix}}",
 								"days"
@@ -147,12 +146,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/days",
-							"protocol": "{{host}}",
+							"raw": "{{scheme}}://{{host}}/{{prefix}}/days",
+							"protocol": "{{scheme}}",
 							"host": [
-								"{{scheme}}"
+								"{{host}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"{{prefix}}",
 								"days"
@@ -224,12 +222,11 @@
 					]
 				},
 				"url": {
-					"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weekdays",
-					"protocol": "{{host}}",
+					"raw": "{{scheme}}://{{host}}/{{prefix}}/weekdays",
+					"protocol": "{{scheme}}",
 					"host": [
-						"{{scheme}}"
+						"{{host}}"
 					],
-					"port": "{{port}}",
 					"path": [
 						"{{prefix}}",
 						"weekdays"
@@ -265,12 +262,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weekdays",
-							"protocol": "{{host}}",
+							"raw": "{{scheme}}://{{host}}/{{prefix}}/weekdays",
+							"protocol": "{{scheme}}",
 							"host": [
-								"{{scheme}}"
+								"{{host}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"{{prefix}}",
 								"weekdays"
@@ -339,12 +335,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weekdays",
-							"protocol": "{{host}}",
+							"raw": "{{scheme}}://{{host}}/{{prefix}}/weekdays",
+							"protocol": "{{scheme}}",
 							"host": [
-								"{{scheme}}"
+								"{{host}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"{{prefix}}",
 								"weekdays"
@@ -416,12 +411,11 @@
 					]
 				},
 				"url": {
-					"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weeks",
-					"protocol": "{{host}}",
+					"raw": "{{scheme}}://{{host}}/{{prefix}}/weeks",
+					"protocol": "{{scheme}}",
 					"host": [
-						"{{scheme}}"
+						"{{host}}"
 					],
-					"port": "{{port}}",
 					"path": [
 						"{{prefix}}",
 						"weeks"
@@ -457,12 +451,11 @@
 							]
 						},
 						"url": {
-							"raw": "{{host}}://{{scheme}}:{{port}}/{{prefix}}/weeks",
-							"protocol": "{{host}}",
+							"raw": "{{scheme}}://{{host}}/{{prefix}}/weeks",
+							"protocol": "{{scheme}}",
 							"host": [
-								"{{scheme}}"
+								"{{host}}"
 							],
-							"port": "{{port}}",
 							"path": [
 								"{{prefix}}",
 								"weeks"
@@ -507,6 +500,5 @@
 				}
 			]
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }
