@@ -1,8 +1,6 @@
 <?php
 
-
 namespace App\Services;
-
 
 use App\Http\Requests\DateRequest;
 
@@ -48,27 +46,21 @@ class ConvertService
     private function convert_format(?string $to_format, int $days)
     {
         switch ($to_format) {
-            case 'h':
-            {
-                return $days * 24;
-            }
-            case 'm':
-            {
-                return $days * 24 * 60;
-            }
-            case 's':
-            {
-                return $days * 24 * 60 * 60;
-            }
-            case 'y':
-            {
-                return (int)$days / 365;
-            }
-            default:
-            {
-                return $days;
-            }
+            case 'h': {
+                    return $days * 24;
+                }
+            case 'm': {
+                    return $days * 24 * 60;
+                }
+            case 's': {
+                    return $days * 24 * 60 * 60;
+                }
+            case 'y': {
+                    return (int)$days / 365;
+                }
+            default: {
+                    return $days;
+                }
         }
     }
-
 }
